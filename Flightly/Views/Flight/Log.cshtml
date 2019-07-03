@@ -1,0 +1,22 @@
+﻿@using FlightTrackly.ViewModels.Flight;
+@model LogFlightViewModel;
+@{
+    ViewData["Title"] = "Log";
+}
+
+<div class="card bg-dark">
+    <div class="card-header">
+        Log a Flight
+    </div>
+    <div class="card-body">
+        @Html.BeginForm("Log", "Flight", FormMethod.Post)
+        {
+        <div class="form-group">
+            @Html.DisplayName("Date of Flight")
+            @Html.DisplayTextFor(x => x.DateOfFlight)
+        </div>
+            
+        }
+    </div>
+</div> 
+
